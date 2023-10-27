@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Band</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav main-nav">
+        <ul type="circle">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="store.html">STORE</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="band-name band-name-large">The Band</h1>
+    </header>
+    <section class="container content-section">
+      <h2 class="section-header">MUSIC</h2>
+      <div class="shop-items">
+        <% items.music.forEach(function(item) {%>
+      <div class="shop-item" data-item-id="<%=item.id %>">
+        
+          <span class="shop-item-title"><%=item.name %></span>
+        
+        <img class="shop-item-img"src="images/<%=item.imgName %>" alt="wings" height="225px" />
+        <div class="shop-item-details">
+          <span class="shop-item-price">$<%=item.price %></span>
+          <button class="btn btn-primary shop-item-btn " role="button">Add to cart</button>
+        </div>
+      </div>
+
+    <%}) %>
+    </div>
+    </section>
+    <section class="container content-section">
+      <h2 class="section-header">MERCH</h2>
+      <div class="shop-items">
+        <% items.merch.forEach(function(item) {%>
+          <div class="shop-item" data-item-id="<%=item.id %>">
+        
+            <span class="shop-item-title"><%=item.name %></span>
+          
+          <img class="shop-item-img"src="images/<%=item.imgName %>" alt="wings" height="225px" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$<%=item.price %></span>
+            <button class="btn btn-primary shop-item-btn " role="button">Add to cart</button>
+          </div>
+        </div>
+      <%}) %>
+    </div>
+      </section>
+    </section>
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span  class="cart-price cart-header cart-column">PRICE</span>
+        <span  class="cart-quant cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items">
+      </div>
+      <div class="cart-total">
+        <span class="cart-total-title">Total</span>
+        <span class="cart-total-price">$0</span>
+      </div>
+
+        <button class="btn btn-primary btn-purchase"type="button">PURCHASE</button>
+    
+    </section>
+
+    <footer class="main-footer">
+      <div class="container main-footer-container">
+        <h2 class="band-name">The Band</h2>
+        <ul class="nav footer-nav">
+          <li><a href="https://www.instagram.com"target="_blank">
+            <img src="images/instagram.png" alt="insta" height="30px" /></li>
+          </a>
+            <li><a href="https://www.spotify.com" target="_blank">
+              <img src="images/spotify.png" alt="spotify" height="30px" /></li>
+          </a>
+            <li><a href="https://www.youtube.com" target="_blank">
+            <img src="images/youtube.png" alt="youtube" height="30px" />
+          </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://checkout.stripe.com/checkout.js" ></script>
+    <script>
+  var stripePublicKey='<%=stripePublicKey%>'
+    </script>
+    <script src="store.js"></script>
+  </body>
+</html>

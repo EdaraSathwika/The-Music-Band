@@ -1,0 +1,31 @@
+{
+    "music":[
+{
+    "id":1,"name":"Wings","price":50,
+    "imgName":"wing.jpg"
+},
+{
+    "id":2,"name":"Butter","price":60,
+    "imgName":"butter.png"
+},
+{
+    "id":3,"name":"Proof","price":65,
+    "imgName":"youth.jpg"
+},
+{
+    "id":4,"name":"Love Yourself","price":55,
+    "imgName":"ly.jpg"
+}
+    ],
+    "merch":[
+
+        {
+            "id":5,"name":"Shirt","price":5,
+            "imgName":"shirt.jpg"
+        },
+        {
+            "id":6,"name":"TinyTan","price":10,
+            "imgName":"mer1.jpg"
+        }
+    ]
+}
